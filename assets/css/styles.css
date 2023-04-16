@@ -1,0 +1,65 @@
+/* Author: Javier López López
+   Version: 1.0
+   Date: 16/04/2023
+   File Description: Css file for theme styles
+*/
+/****************************************\
+01.General
+02.Titles
+03.Buttons
+04.Forms
+05.Navbar
+06.Banner section
+*****************************************/
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+:root {
+    --color-primary: #3776af;
+    --color-secondary: #ffde59;
+}
+
+/* Font declarations */
+@font-face {
+    font-family: 'Zing Rust Base';
+    src: url('../fonts/ZingRustG1-Trial-Base.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Zing Sans Rust';
+    src: url('../fonts/ZingSansRustT-Trial-Base.woff2') format('woff2');
+}
+
+
+html, body, p {
+    font-family: 'Zing Sans Rust', sans-serif;
+    color: #000;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Zing Rust Base', serif;
+    color: var(--color-primary);
+}
+
+/* Colors */
+.thm-color-primary {
+    color: var(--color-primary);
+}
+
+.thm-color-secondary {
+    color: var(--color-secondary);
+}
+
+/* Backgrounds */
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+
+/*--------------------------------------------------------------
+# Titles
+--------------------------------------------------------------*/
+
