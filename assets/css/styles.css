@@ -25,18 +25,23 @@
 /* Font declarations */
 @font-face {
     font-family: 'Zing Rust Base';
-    src: url('../fonts/ZingRustG1-Trial-Base.woff') format('woff');
+    src: url('../fonts/ZingRustBaseFont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'Zing Sans Rust';
-    src: url('../fonts/ZingSansRustT-Trial-Base.woff2') format('woff2');
+    src: url('../fonts/ZingSansRustFont.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
 }
 
 
 html, body, p {
     font-family: 'Zing Sans Rust', sans-serif;
     color: #000;
+    font-size: min(calc(0.95rem + 0.1vw), 1.1rem);
 }
 
 h1, h2, h3, h4, h5 {
@@ -58,8 +63,82 @@ h1, h2, h3, h4, h5 {
     background-color: var(--color-primary);
 }
 
+/* Container */
+.thm-container {
+    max-width: 1250px;
+}
+
 
 /*--------------------------------------------------------------
 # Titles
 --------------------------------------------------------------*/
+
+h2 {
+    font-size: calc(2rem + 0.8vw);
+}
+
+h1 span, h2 span {
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+
+.thm-btn-primary, .thm-btn-primary-lt {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 28px;
+    font-family: 'Zing Rust Base', serif;
+    text-align: center;
+    background-color: var(--color-secondary);
+    color: #fff !important;
+}
+
+.thm-btn-primary {
+    padding: 4px 48px;
+    font-size: min(calc(0.9rem + 0.1vw), 1rem);
+}
+
+.thm-btn-primary-lt {
+    padding: 4px 12px;
+    font-size: min(calc(0.8rem + 0.1vw), 0.875rem);
+}
+
+.thm-btn-primary:hover, .thm-btn-primary-lt:hover {
+    background-color: var(--color-primary);
+}
+
+
+/*--------------------------------------------------------------
+# Boat card
+--------------------------------------------------------------*/
+
+.boat-card .boat-image {
+    width: fit-content;
+    margin: 10px 0;
+}
+
+.boat-card .boat-image img {
+    object-fit: cover;
+}
+
+.boat-card .boat-content h4 {
+    margin-bottom: 0;
+    line-height: 25px;
+}
+
+.boat-card .boat-content p {
+    font-size: min(calc(0.75rem + 0.1vw), 0.79rem);
+}
+
+.boat-card .boat-items p {
+    margin: 3.5px 0;
+}
+
+.boat-card .boat-items > div:not(:last-child) {
+    border-bottom: 1px solid #b3c4d0;
+}
 
