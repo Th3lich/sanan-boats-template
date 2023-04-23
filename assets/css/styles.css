@@ -8,8 +8,10 @@
 02.Titles
 03.Buttons
 04.Boat card
-05.Footer
-06.Book my charter section
+05.Service card
+06.Footer
+07.Book my charter section
+08.Our services section
 *****************************************/
 
 
@@ -154,6 +156,38 @@ h4 {
 
 
 /*--------------------------------------------------------------
+# Service card
+--------------------------------------------------------------*/
+
+.service-card .service-image {
+    width: fit-content;
+    height: 226px;
+}
+
+.service-card .service-image img {
+    object-fit: cover;
+}
+
+.service-card .service-content {
+    padding-top: 0.9rem;
+    padding-bottom: 0.8rem;
+    border-left: var(--color-primary) solid 1px;
+    border-right: var(--color-primary) solid 1px;
+    border-bottom: var(--color-primary) solid 1px;
+    background-color: #fff;
+}
+
+.service-card .service-content h4 {
+    font-size: min(calc(1.69rem + 0.2vw), 1.8rem);
+}
+
+.service-card .service-content p {
+    font-size: min(calc(0.75rem + 0.08vw), 0.9rem);
+    line-height: 18px;
+}
+
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 
@@ -236,4 +270,28 @@ footer p {
         height: 202px;
         left: 68px;
     }
+}
+
+
+/*--------------------------------------------------------------
+# Our services section
+--------------------------------------------------------------*/
+
+.our-services-section .container div {
+    z-index: 2;
+}
+
+.our-services-section .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+    background-image: url("../images/our_services_bg.svg");
+    background-position: bottom center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: 1;
 }
