@@ -7,9 +7,8 @@
 01.General
 02.Titles
 03.Buttons
-04.Forms
-05.Navbar
-06.Banner section
+04.Boat card
+05.Footer
 *****************************************/
 
 
@@ -60,7 +59,7 @@ h1, h2, h3, h4, h5 {
 
 /* Backgrounds */
 .bg-primary {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary) !important;
 }
 
 /* Container */
@@ -80,6 +79,10 @@ h2 {
 h1 span, h2 span {
     color: var(--color-secondary);
     text-align: center;
+}
+
+h4 {
+    font-size: min(calc(1.32rem + 0.15vw), 1.45rem);
 }
 
 
@@ -128,6 +131,7 @@ h1 span, h2 span {
 .boat-card .boat-content h4 {
     margin-bottom: 0;
     line-height: 25px;
+    font-size: min(calc(1.3rem + 0.15vw), 1.43rem);
 }
 
 .boat-card .boat-content p {
@@ -142,3 +146,36 @@ h1 span, h2 span {
     border-bottom: 1px solid #b3c4d0;
 }
 
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer ul {
+    padding-left: 0;
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 2px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none!important;
+    font-size: min(calc(0.95rem + 0.1vw), 1.04rem);
+}
+
+footer a:hover {
+    color: var(--color-secondary);
+}
+
+footer p {
+    font-size: min(calc(0.78rem + 0.1vw), 0.84rem);
+}
+
+@media screen and (max-width: 767px) {
+    footer .footer-logo {
+        width: 250px!important;
+    }
+}
