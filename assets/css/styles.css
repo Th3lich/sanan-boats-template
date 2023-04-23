@@ -9,6 +9,7 @@
 03.Buttons
 04.Boat card
 05.Footer
+06.Book my charter section
 *****************************************/
 
 
@@ -19,6 +20,7 @@
 :root {
     --color-primary: #3776af;
     --color-secondary: #ffde59;
+    --color-primary-light: #e5edf5;
 }
 
 /* Font declarations */
@@ -62,6 +64,10 @@ h1, h2, h3, h4, h5 {
     background-color: var(--color-primary) !important;
 }
 
+.bg-light {
+    background-color: var(--color-primary-light) !important;
+}
+
 /* Container */
 .thm-container {
     max-width: 1250px;
@@ -72,11 +78,11 @@ h1, h2, h3, h4, h5 {
 # Titles
 --------------------------------------------------------------*/
 
-h2 {
-    font-size: calc(2rem + 0.8vw);
+h3 {
+    font-size: min(calc(2rem + 0.8vw), 2.7rem);
 }
 
-h1 span, h2 span {
+h1 span, h2 span, h3 span {
     color: var(--color-secondary);
     text-align: center;
 }
@@ -177,5 +183,57 @@ footer p {
 @media screen and (max-width: 767px) {
     footer .footer-logo {
         width: 250px!important;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Book my charter section
+--------------------------------------------------------------*/
+
+.book-my-charter-section h3 {
+    font-size: min(calc(1.9rem + 0.8vw), 2.6rem);
+}
+
+.book-my-charter-section .book-my-charter-images {
+    height: 390px;
+}
+
+.book-my-charter-section .book-my-charter-img-1 {
+    width: 398px;
+    height: 347px;
+}
+
+.book-my-charter-section .book-my-charter-img-2 {
+    width: 395px;
+    height: 301px;
+    left: 94px;
+}
+
+.book-my-charter-section .book-my-charter-img-1 img, .book-my-charter-section .book-my-charter-img-2 img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.book-my-charter-section .book-my-charter-img-1 img {
+    margin-left: -32px;
+}
+
+@media screen and (max-width: 767px) {
+    .book-my-charter-section .book-my-charter-images {
+        width: 340px;
+        height: 264px;
+        margin: auto;
+    }
+    
+    .book-my-charter-section .book-my-charter-img-1 {
+        width: 271px;
+        height: 234px;
+    }
+    
+    .book-my-charter-section .book-my-charter-img-2 {
+        width: 269x;
+        height: 202px;
+        left: 68px;
     }
 }
