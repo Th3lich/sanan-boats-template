@@ -12,6 +12,7 @@
 06.Footer
 07.Book my charter section
 08.Our services section
+09.Book with us section
 *****************************************/
 
 
@@ -289,9 +290,26 @@ footer p {
     width: 100%;
     height: 100%;
     opacity: 0.25;
-    background-image: url("../images/our_services_bg.svg");
+    background-image: url(../images/our_services_bg.svg);
     background-position: bottom center;
     background-size: 100% auto;
     background-repeat: no-repeat;
     z-index: 1;
+}
+
+
+/*--------------------------------------------------------------
+# Book with us section
+--------------------------------------------------------------*/
+
+.book-with-us-section {
+    background-image: url(../images/book_with_us_bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.book-with-us-section h2 {
+    font-size: min(calc(2.4rem + 2vw), 3.8rem);
 }
