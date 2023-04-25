@@ -7,12 +7,14 @@
 01.General
 02.Titles
 03.Buttons
-04.Boat card
-05.Service card
-06.Footer
-07.Book my charter section
-08.Our services section
-09.Book with us section
+04.Header
+05.Navbar
+06.Boat card
+07.Service card
+08.Footer
+09.Book my charter section
+10.Our services section
+11.Book with us section
 *****************************************/
 
 
@@ -24,7 +26,7 @@
     --color-primary: #3776af;
     --color-secondary: #ffde59;
     --color-primary-light: #e5edf5;
-    --color-bg: #f3f7fa;
+    --color-primary-extra-light: #f3f7fa;
 }
 
 /* Font declarations */
@@ -40,10 +42,6 @@
     src: url('../fonts/ZingSansRustFont.woff2') format('woff2');
     font-weight: 900;
     font-style: italic;
-}
-
-html, body {
-    background-color: var(--color-bg);
 }
 
 html, body, p {
@@ -73,6 +71,10 @@ h1, h2, h3, h4, h5 {
 
 .bg-light {
     background-color: var(--color-primary-light) !important;
+}
+
+.bg-extra-light {
+    background-color: var(--color-primary-extra-light) !important;
 }
 
 /* Container */
@@ -125,6 +127,65 @@ h4 {
 
 .thm-btn-primary:hover, .thm-btn-primary-lt:hover {
     background-color: var(--color-primary);
+}
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.thm-header {
+    background-color: var(--color-primary);
+    height: 40px;
+}
+
+.thm-header .info {
+    font-size: min(calc(0.62rem + 0.1vw), 0.685rem);
+}
+
+.thm-header .social-media a {
+    margin-right: 1px;
+}
+
+.thm-header .access a {
+    font-size: min(calc(0.66rem + 0.1vw), 0.72rem);
+    text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+
+.thm-navbar {
+    background-color: #edf3f8;
+    height: 75px;
+}
+
+.thm-navbar .logo-container {
+    width: 200px;
+    height: 54px;
+}
+
+.thm-navbar .nav-item {
+    list-style: none;
+}
+
+.thm-navbar .nav-item .nav-link {
+    padding: 15px 0.5rem;
+    margin: 0 16px;
+    font-family: 'Zing Rust Base', serif;
+    color: var(--color-primary);
+    font-size: min(calc(1.08rem + 0.1vw), 1.16rem);
+    transition: scale .09s;
+}
+
+.thm-navbar .nav-item .nav-link:hover {
+    scale: 1.05;
+}
+
+.thm-navbar .nav-link.active {
+    text-decoration: underline;
 }
 
 
