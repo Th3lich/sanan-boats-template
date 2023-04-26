@@ -7,14 +7,16 @@
 01.General
 02.Titles
 03.Buttons
-04.Header
-05.Navbar
-06.Boat card
-07.Service card
-08.Footer
-09.Book my charter section
-10.Our services section
+04.Forms
+05.Header
+06.Navbar
+07.Boat card
+08.Service card
+09.Footer
+10.Book my charter section
 11.Book with us section
+12.Contact info section
+13.Contact Form Section
 *****************************************/
 
 
@@ -27,6 +29,8 @@
     --color-secondary: #ffde59;
     --color-primary-light: #e5edf5;
     --color-primary-extra-light: #f3f7fa;
+    --color-font-2: #637b89;
+    --color-bg-light: #ccdde8;
 }
 
 /* Font declarations */
@@ -34,6 +38,13 @@
     font-family: 'Zing Rust Base';
     src: url('../fonts/ZingRustBaseFont.woff2') format('woff2');
     font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zing Rust Base Bold';
+    src: url('../fonts/ZingRustBaseBoldFont.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
 
@@ -53,6 +64,14 @@ html, body, p {
 h1, h2, h3, h4, h5 {
     font-family: 'Zing Rust Base', serif;
     color: var(--color-primary);
+}
+
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-primary-light);
 }
 
 /* Colors */
@@ -77,6 +96,29 @@ h1, h2, h3, h4, h5 {
     background-color: var(--color-primary-extra-light) !important;
 }
 
+.bg-spirals {
+    position: relative;
+}
+
+.bg-spirals .container div {
+    z-index: 2;
+}
+
+.bg-spirals .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+    background-image: url(../images/our_services_bg.svg);
+    background-position: bottom center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
 /* Container */
 .thm-container {
     max-width: 1250px;
@@ -86,6 +128,10 @@ h1, h2, h3, h4, h5 {
 /*--------------------------------------------------------------
 # Titles
 --------------------------------------------------------------*/
+
+h2 {
+    font-size: min(calc(2.2rem + 0.8vw), 2.94rem);
+}
 
 h3 {
     font-size: min(calc(2rem + 0.8vw), 2.7rem);
@@ -105,7 +151,7 @@ h4 {
 # Buttons
 --------------------------------------------------------------*/
 
-.thm-btn-primary, .thm-btn-primary-lt {
+.thm-btn-primary, .thm-btn-primary-lt, .thm-btn-primary-xl {
     width: fit-content;
     height: fit-content;
     border-radius: 28px;
@@ -125,8 +171,48 @@ h4 {
     font-size: min(calc(0.8rem + 0.1vw), 0.875rem);
 }
 
-.thm-btn-primary:hover, .thm-btn-primary-lt:hover {
+.thm-btn-primary-xl {
+    padding: 8px 48px;
+    font-size: min(calc(1rem + 0.11vw), 1.14rem);
+}
+
+.thm-btn-primary:hover, .thm-btn-primary-lt:hover, .thm-btn-primary-xl:hover {
     background-color: var(--color-primary);
+}
+
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+.thm-label, .thm-check-label {
+    margin-bottom: 0 !important;
+    color: var(--color-primary);
+}
+
+.thm-check-label {
+    font-size: min(calc(0.62rem + 0.1vw), 0.685rem);
+}
+
+.thm-form-control, .thm-form-check-input {
+    border: 1px solid #b3c4d0;
+    border-radius: 0 !important;
+}
+
+.thm-form-control {
+    padding: 4px 6px;
+}
+
+.thm-form-check-input {
+    width: 0.8em;
+    height: 0.8em;
+    margin-top: 0;
+}
+
+.thm-form-check {
+    display: flex;
+    gap: 4px;
+    align-items: center;
 }
 
 
@@ -340,30 +426,6 @@ footer p {
 
 
 /*--------------------------------------------------------------
-# Our services section
---------------------------------------------------------------*/
-
-.our-services-section .container div {
-    z-index: 2;
-}
-
-.our-services-section .container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.25;
-    background-image: url(../images/our_services_bg.svg);
-    background-position: bottom center;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    z-index: 1;
-}
-
-
-/*--------------------------------------------------------------
 # Book with us section
 --------------------------------------------------------------*/
 
@@ -403,7 +465,7 @@ footer p {
 }
 
 .faq-section .quest-active .faq-quest {
-    background-color: #ccdde8;
+    background-color: var(--color-bg-light);
 }
 
 .faq-section .faq-quest h5 {
@@ -451,94 +513,86 @@ footer p {
 }
 
 
+/*--------------------------------------------------------------
+# Contact Info Section
+--------------------------------------------------------------*/
 
-
-
-.faq-heading {
-    font-family: Lato;   
-    font-weight: 400;
-    font-size: 19px;
-    -webkit-transition: text-indent 0.2s;
-    transition: text-indent 0.2s;
-    text-indent: 20px;
-    color: #333;
+.contact-info-section h2 {
+    font-size: min(calc(2rem + 0.9vw), 2.94rem);
 }
 
-.faq-text {
-    font-family: Open Sans;   
-    font-weight: 400;
-    color: #919191;
-    width:95%;
-    padding-left:20px;
-    margin-bottom:30px;
+.contact-info-section .contact-info-image-container {
+    width: 100%;
+    max-width: 620px;
+    padding: 0px 10px;
+    margin: auto;
 }
 
-.faq {
-    width: 1000px;
-    margin: 0 auto;
-    background: white;
-    border-radius: 4px;
-    position: relative;
-    border: 1px solid #E1E1E1;
+.contact-info-section .message-icon-container {
+    width: 65px;
+    height: 65px;
+    background-color: var(--color-primary);
+    border-radius: 32.5px;
+    left: -20px;
+    bottom: 50px;
 }
 
-.faq label {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    height: 56px;
-    padding-top:1px;
-    background-color: #FAFAFA;
-    border-bottom: 1px solid #E1E1E1;
+.contact-info-section .contact-info-image-container .contact-info-image {
+    width: 100%;
+    height: fit-content;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
-.faq input[type="checkbox"] {
-    display: none;
+.contact-info-section .info-title {
+    color: var(--color-primary);
+    font-family: 'Zing Rust Base Bold';
+    font-size: min(calc(1.25rem + 0.1vw), 1.35rem);
+    margin-bottom: 0.1rem;
 }
 
-.faq .faq-arrow {
-    width: 5px;
-    height: 5px;
-    transition: -webkit-transform 0.8s;
-    transition: transform 0.8s;
-    transition: transform 0.8s, -webkit-transform 0.8s;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    border-top: 2px solid rgba(0, 0, 0, 0.33);
-    border-right: 2px solid rgba(0, 0, 0, 0.33);
-    float: right;
-    position: relative;
-    top: -30px;
-    right: 27px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+.contact-info-section p:not(.info-title) {
+    color: var(--color-font-2);
+    font-size: min(calc(1.1rem + 0.08vw), 1.16rem);
+    margin-bottom: 0.6rem;
 }
 
- .faq input[type="checkbox"]:checked + label > .faq-arrow {
-    transition: -webkit-transform 0.8s;
-    transition: transform 0.8s;
-    transition: transform 0.8s, -webkit-transform 0.8s;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
+@media (max-width: 767px) {
+    .contact-info-section .contact-info-image-container .contact-info-image {
+        border-top-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+    }
+
+    .contact-info-section .message-icon-container {
+        width: 38px;
+        height: 38px;
+        background-color: var(--color-primary);
+        border-radius: 20px;
+        left: -8px;
+        bottom: 20px;
+    }
+
+    .contact-info-section .message-icon-container img {
+        width: 21px;
+        height: fit-content;
+    }
 }
 
-.faq input[type="checkbox"]:checked + label {
-    display: block;
-    background: rgba(255,255,255,255) !important;
-    color: #4f7351;
-    height: 225px;
-    transition: height 0.8s;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+/*--------------------------------------------------------------
+# Contact Form Section
+--------------------------------------------------------------*/
+
+.contact-form-section h3 {
+    font-size: min(calc(1.65rem + 0.8vw), 2.28rem);
 }
 
- .faq input[type='checkbox']:not(:checked) + label {
-    display: block;
-    transition: height 0.8s;
-    height: 60px;
-    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+.contact-form-section p {
+    font-size: min(calc(1.05rem + 0.12vw), 1.15rem);
+}
+
+.contact-form-card {
+    width: 100%;
+    max-width: 810px;
+    background-color: var(--color-bg-light);
 }
