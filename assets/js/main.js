@@ -18,4 +18,13 @@ window.addEventListener('load', function() {
         });
     }
 
+    // Range inputs
+    let rangeInputs = document.getElementsByClassName('thm-range');
+    if (rangeInputs) {
+        Array.from(rangeInputs).forEach((quest) => {
+            quest.addEventListener('change', (event) => {
+                event.target.parentElement.getElementsByClassName('thm-range-value-left')[0].innerHTML = event.target.value + '€'
+            });
+        });
+    }
 });

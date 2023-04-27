@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- SEO Meta Tags -->
-        <title>Sanan Boats</title>
-        <meta name="description" content="Sanan Boats">
-        <meta property="og:title" content="Sanan Boats">
+        <title>Sanan Boats Contact</title>
+        <meta name="description" content="Sanan Boats contact">
+        <meta property="og:title" content="Sanan Boats contact">
 
         <!-- External Styles -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -16,16 +16,95 @@
         <link rel="stylesheet" href="assets/css/styles.css">
     </head>
     <body>
+        <!-- Header -->
+        <header class="thm-header">
+            <div class="container thm-container d-flex justify-content-between align-items-center h-100 ps-2 ps-lg-4 pe-2 pe-lg-5">
+                <p class="info mb-0 text-white">info@sananboats.com <span class="px-md-1">|</span> +34 653 48 23 63</p>
+                <div class="d-flex">
+                    <div class="social-media pe-2 pe-md-4">
+                        <a href="#"><img src="assets/images/ic_instagram.svg" alt="Instagram logo" width="19" height="19"></a>
+                        <a href="#"><img src="assets/images/ic_facebook.svg" alt="Facebook logo" width="19" height="19"></a>
+                        <a href="#"><img src="assets/images/ic_google.svg" alt="Google logo" width="19" height="19"></a>
+                    </div>
+                    <div class="access">
+                        <img src="assets/images/ic_user.svg" alt="User image" width="15" height="15">
+                        <a class="text-white" href="#">Acceso</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navbar -->
+        <nav class="navbar thm-navbar">
+            <div class="container thm-container">
+                <a class="logo-container overflow-hidden d-flex align-items-center" href="/">
+                    <img class="logo mt-2" src="assets/images/sanan_boats_logo.svg" alt="Logo Sanan Boats" width="200">
+                </a>
+                <ul class="nav-items d-none d-md-flex mb-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="boats.html">BARCOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">WATER TOYS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MOTOS ACUÁTICAS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
         <!-- Boat Section -->
-        <section class="our-boats-section">
-            <div class="container thm-container gx-5">
+        <section class="boats-section pt-4 pb-5">
+            <div class="container thm-container gx-2 gx-md-5">
                 <div class="row py-4 mt-2 mb-3">
-                    <div class="col text-center">
-                        <h3 class="pt-2 pb-3">NUESTROS <span>BARCOS</span></h3>
+                    <div class="col">
+                        <h3 class="pt-2">NUESTROS <span>BARCOS</span></h3>
                         <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
                     </div>
                 </div>
-                <div class="row row-cols-1 row-cols-md-3 gx-4 gy-4 px-4 px-md-0">
+                <div class="row mb-5">
+                    <div class="col bg-primary mx-3">
+                        <form class="form-boats-search" action="#">
+                            <div class="row ps-2">
+                                <div class="col-6 col-md position-relative ms-md-1 ps-0 pe-2">
+                                    <label for="capacity" class="form-label thm-label">CAPACIDAD</label>
+                                    <input type="text" class="form-control thm-form-control" id="capacity" required>
+                                    <img src="assets/images/ic_capacity.svg" class="search-icon position-absolute" alt="icon" width="10.67" height="12.08"/>
+                                </div>
+                                <div class="col-6 col-md position-relative ps-0 pe-2">
+                                    <label for="cabins" class="form-label thm-label">CABINAS</label>
+                                    <input type="text" class="form-control thm-form-control" id="cabins">
+                                    <img src="assets/images/ic_cabins.svg" class="search-icon position-absolute" alt="icon" width="13.61" height="9.28"/>
+                                </div>
+                                <div class="col-6 col-md position-relative ps-0 pe-2">
+                                    <label for="length" class="form-label thm-label">ESLORA</label>
+                                    <input type="text" class="form-control thm-form-control" id="length">
+                                    <img src="assets/images/ic_length.svg" class="search-icon position-absolute" alt="icon" width="17.2" height="8.59"/>
+                                </div>
+                                <div class="col-6 col-md position-relative ps-0 pe-2">
+                                    <label for="captain" class="form-label thm-label">CAPITÁN</label>
+                                    <input type="text" class="form-control thm-form-control" id="captain">
+                                    <img src="assets/images/ic_captain.svg" class="search-icon position-absolute" alt="icon" width="13.3" height="9.31"/>
+                                </div>
+                                <div class="col-6 col-md position-relative ps-0 pe-2">
+                                    <label for="prices" class="form-label thm-label">PRECIOS</label>
+                                    <input id="cabins" type="range" class="form-range thm-range" min="0" max="5000" step="10">
+                                    <span class="thm-range-value-left position-absolute start-0 ms-2">0€</span>
+                                    <span class="thm-range-value-right position-absolute end-0 me-2">5000€</span>
+                                </div>
+                                <div class="col-6 col-md d-flex align-items-center justify-content-end mb-0 pe-3 gap-1">
+                                    <button type="submit" class="btn thm-btn-primary-lt-light">Enviar</button>
+                                    <button type="submit" class="btn thm-btn-secondary-lt">Limpiar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 gx-4 gy-4 pb-5 px-4 px-md-0">
                     <div class="col">
                         <div class="boat-card px-1">
                             <div class="boat-image position-relative overflow-hidden">
@@ -205,155 +284,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row py-4 py-md-5">
-                    <div class="col text-center">
-                        <a href="#" class="btn thm-btn-primary">VER TODOS LOS BARCOS</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Book my charter section -->
-        <section class="book-my-charter-section bg-light py-4 py-lg-5">
-            <div class="container thm-container px-5 pt-4 pb-lg-5 mt-2 mt-lg-0">
-                <div class="row">
-                    <div class="col-lg-6 p-lg-4 mb-4 mb-lg-0">
-                        <h3>RESERVA TU CHARTER EN SAN ANTONIO, UN LUGAR MÁGICO EN IBIZA</h3>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
-                        <a href="#" class="btn thm-btn-primary">VER TODOS LOS BARCOS</a>
-                    </div>
-                    <div class="col-lg-6 book-my-charter-images position-relative mt-2 mt-lg-0">
-                        <div class="book-my-charter-img-2 position-absolute top-0 overflow-hidden">
-                            <img src="assets/images/book_our_charter_2.jpg" alt="Book my charter 2">
-                        </div>
-                        <div class="book-my-charter-img-1 position-absolute bottom-0 start-0 overflow-hidden">
-                            <img src="assets/images/book_our_charter_1.jpg" alt="Book my charter 1">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our services section -->
-        <section class="our-services-section bg-spirals">
-            <div class="container thm-container position-relative pb-5 gx-5">
-                <div class="row py-4 mt-2 mb-3">
-                    <div class="col text-center">
-                        <h3 class="pt-2 pb-3">NUESTROS <span>SERVICIOS</span></h3>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
-                    </div>
-                </div>
-                <div class="row row-cols-1 row-cols-md-3 gy-4 mb-4">
-                    <div class="col">
-                        <div class="service-card px-1">
-                            <div class="service-image position-relative overflow-hidden">
-                                <img class=" w-100" src="assets/images/boat_placeholder.jpg" alt="Boat image">
-                            </div>
-                            <div class="service-content d-flex flex-column align-items-center px-4">
-                                <h4>BARCOS</h4>
-                                <p class="text-center p-1 pb-2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui.</p>
-                                <a href="#" class="btn thm-btn-primary-lt">VER MÁS</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="service-card px-1">
-                            <div class="service-image position-relative overflow-hidden">
-                                <img class=" w-100" src="assets/images/service_placeholder_1.jpg" alt="Boat image">
-                            </div>
-                            <div class="service-content d-flex flex-column align-items-center px-4">
-                                <h4>MOTOS ACUÁTICAS</h4>
-                                <p class="text-center p-1 pb-2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui.</p>
-                                <a href="#" class="btn thm-btn-primary-lt">VER MÁS</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="service-card px-1">
-                            <div class="service-image position-relative overflow-hidden">
-                                <img class=" w-100" src="assets/images/service_placeholder_2.jpg" alt="Boat image">
-                            </div>
-                            <div class="service-content d-flex flex-column align-items-center px-4">
-                                <h4>WATER TOYS</h4>
-                                <p class="text-center p-1 pb-2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui.</p>
-                                <a href="#" class="btn thm-btn-primary-lt">VER MÁS</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Book with us section -->
-        <section class="book-with-us-section py-5">
-            <div class="container thm-container py-lg-5">
-                <div class="row">
-                    <div class="col text-center">
-                        <h2 class="text-white pb-2">¿QUIERES <span>RESERVAR</span> CON NOSOTROS?</h2>
-                        <a href="#" class="btn thm-btn-primary">CONTACTA CON NOSOTROS</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Book with us section -->
-        <section class="faq-section bg-extra-light">
-            <div class="container thm-container pb-lg-2">
-                <div class="row">
-                    <div class="col py-2 mt-4 mb-2 text-center">
-                        <h3>FAQ - PREGUNTAS FRECUENTES</h3>
-                    </div>
-                </div>
-                <div class="row pb-5">
-                    <div class="col d-flex justify-content-center">
-                        <ul class="faq-quests">
-                            <li>
-                                <div class="faq-quest d-flex justify-content-between align-items-center">
-                                    <h5 class="mb-0">PREGUNTA 1</h5>
-                                    <div class="faq-arrow"></div>
-                                </div>
-                                <div class="faq-answer">
-                                    <p class="mb-0">
-                                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="faq-quest d-flex justify-content-between align-items-center">
-                                    <h5 class="mb-0">PREGUNTA 2</h5>
-                                    <div class="faq-arrow"></div>
-                                </div>
-                                <div class="faq-answer">
-                                    <p class="mb-0">
-                                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="faq-quest d-flex justify-content-between align-items-center">
-                                    <h5 class="mb-0">PREGUNTA 3</h5>
-                                    <div class="faq-arrow"></div>
-                                </div>
-                                <div class="faq-answer">
-                                    <p class="mb-0">
-                                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="faq-quest d-flex justify-content-between align-items-center">
-                                    <h5 class="mb-0">PREGUNTA 4</h5>
-                                    <div class="faq-arrow"></div>
-                                </div>
-                                <div class="faq-answer">
-                                    <p class="mb-0">
-                                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
                     </div>
                 </div>
             </div>
