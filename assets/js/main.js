@@ -27,4 +27,32 @@ window.addEventListener('load', function() {
             });
         });
     }
+
+    // Video control
+    let playPauseBtn = document.getElementById('play_pause_btn');
+    let boatVideo = document.getElementById('boat_video');
+    if (playPauseBtn && boatVideo) {
+        let playSvg = document.getElementById('play_svg');
+        let pauseSvg = document.getElementById('pause_svg');
+
+        playPauseBtn.addEventListener('click', (event) => {
+            if (boatVideo.paused) {
+                boatVideo.play();
+            } else {
+                boatVideo.pause();
+            }
+        });
+
+        boatVideo.addEventListener('play', (event) => {
+            console.log('play')
+            playSvg.classList.add('d-none');
+            pauseSvg.classList.remove('d-none');
+        });
+
+        boatVideo.addEventListener('pause', (event) => {
+            console.log('pause')
+            playSvg.classList.remove('d-none');
+            pauseSvg.classList.add('d-none');
+        });
+    }
 });

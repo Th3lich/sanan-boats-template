@@ -16,9 +16,71 @@
         <link rel="stylesheet" href="assets/css/styles.css">
     </head>
     <body>
+        <!-- Header -->
+        <header class="thm-header">
+            <div class="container thm-container d-flex justify-content-between align-items-center h-100 ps-2 ps-lg-4 pe-2 pe-lg-5">
+                <p class="info mb-0 text-white">info@sananboats.com <span class="px-md-1">|</span> +34 653 48 23 63</p>
+                <div class="d-flex">
+                    <div class="social-media pe-2 pe-md-4">
+                        <a href="#"><img src="assets/images/ic_instagram.svg" alt="Instagram logo" width="19" height="19"></a>
+                        <a href="#"><img src="assets/images/ic_facebook.svg" alt="Facebook logo" width="19" height="19"></a>
+                        <a href="#"><img src="assets/images/ic_google.svg" alt="Google logo" width="19" height="19"></a>
+                    </div>
+                    <div class="access">
+                        <img src="assets/images/ic_user.svg" alt="User image" width="15" height="15">
+                        <a class="text-white" href="#">Acceso</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner-section overflow-hidden">
+            <div class="container-fluid h-100 position-relative align-items-center justify-content-center px-0">
+                <!-- Navbar -->
+                <nav class="navbar thm-navbar thm-navbar-transparent position absolute start-0 top-0 end-0 z-index-4">
+                    <div class="container thm-container">
+                        <a class="logo-container overflow-hidden d-flex align-items-center" href="/">
+                            <img class="logo mt-2" src="assets/images/sanan_boats_logo.svg" alt="Logo Sanan Boats" width="200">
+                        </a>
+                        <ul class="nav-items d-none d-md-flex mb-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="boats.html">BARCOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">WATER TOYS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">MOTOS ACUÁTICAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">CONTACTO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container thm-container z-index-3 d-flex align-items-center justify-content-center position-absolute start-0 top-0 end-0 bottom-0">
+                    <div class="row">
+                        <div class="col z-index-3 position-relative d-flex flex-column gap-3 justify-content-center align-items-center p-0">
+                            <div id="play_pause_btn" class="play-pause-btn position-absolute start-0 top-0 end-0 bottom-0 d-flex justify-content-center align-items-center">
+                                <svg id="play_svg" class="d-none" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.248 4.212l11.05 6.574c.694.412.91 1.29.483 1.961-.121.19-.287.35-.483.467l-11.05 6.574c-.694.413-1.602.204-2.03-.467A1.39 1.39 0 0 1 6 18.574V5.426C6 4.638 6.66 4 7.475 4c.273 0 .54.073.773.212z" fill="currentColor"></path></svg>
+                                <svg id="pause_svg" class="d-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="7" y="5" width="3" height="14" rx="1.5" fill="currentColor"></rect><rect x="14" y="5" width="3" height="14" rx="1.5" fill="currentColor"></rect></svg>
+                            </div>
+
+                            <h1 class="text-white position-relative z-index-4 mb-0 text-center">ALQUILER DE <span>BARCOS</span> EN IBIZA</h1>
+                            <a href="boats.html" class="btn thm-btn-primary position-relative z-index-4 mb-0 mb-md-4">VER TODOS LOS BARCOS</a>
+                        </div>
+                    </div>
+                </div>
+                <video id="boat_video" class="boat-video position-absolute start-0 top-0 end-0 bottom-0 w-100 h-100" preload="none" autoplay="" muted="" poster="assets/video/boat_video_poster.jpg">
+                    <source src="assets/video/boat_video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
         <!-- Boat Section -->
         <section class="our-boats-section">
-            <div class="container thm-container gx-5">
+            <div class="container thm-container px-md-5">
                 <div class="row py-4 mt-2 mb-3">
                     <div class="col text-center">
                         <h3 class="pt-2 pb-3">NUESTROS <span>BARCOS</span></h3>
@@ -37,7 +99,7 @@
                                         <h4>NOMBRE DEL BARCO</h4>
                                         <p class="mb-2">Puerto de San Antonio</p>
                                     </div>
-                                    <a href="#" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
                                 </div>
                                 <div class="boat-items d-flex flex-column">
                                     <div class="boat-item d-flex justify-content-between">
@@ -67,7 +129,7 @@
                                         <h4>NOMBRE DEL BARCO</h4>
                                         <p class="mb-2">Puerto de San Antonio</p>
                                     </div>
-                                    <a href="#" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
                                 </div>
                                 <div class="boat-items d-flex flex-column">
                                     <div class="boat-item d-flex justify-content-between">
@@ -97,7 +159,7 @@
                                         <h4>NOMBRE DEL BARCO</h4>
                                         <p class="mb-2">Puerto de San Antonio</p>
                                     </div>
-                                    <a href="#" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
                                 </div>
                                 <div class="boat-items d-flex flex-column">
                                     <div class="boat-item d-flex justify-content-between">
@@ -127,7 +189,7 @@
                                         <h4>NOMBRE DEL BARCO</h4>
                                         <p class="mb-2">Puerto de San Antonio</p>
                                     </div>
-                                    <a href="#" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
                                 </div>
                                 <div class="boat-items d-flex flex-column">
                                     <div class="boat-item d-flex justify-content-between">
@@ -157,7 +219,7 @@
                                         <h4>NOMBRE DEL BARCO</h4>
                                         <p class="mb-2">Puerto de San Antonio</p>
                                     </div>
-                                    <a href="#" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
                                 </div>
                                 <div class="boat-items d-flex flex-column">
                                     <div class="boat-item d-flex justify-content-between">
@@ -187,7 +249,7 @@
                                         <h4>NOMBRE DEL BARCO</h4>
                                         <p class="mb-2">Puerto de San Antonio</p>
                                     </div>
-                                    <a href="#" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
                                 </div>
                                 <div class="boat-items d-flex flex-column">
                                     <div class="boat-item d-flex justify-content-between">
@@ -209,7 +271,7 @@
                 </div>
                 <div class="row py-4 py-md-5">
                     <div class="col text-center">
-                        <a href="#" class="btn thm-btn-primary">VER TODOS LOS BARCOS</a>
+                        <a href="boats.html" class="btn thm-btn-primary">VER TODOS LOS BARCOS</a>
                     </div>
                 </div>
             </div>
@@ -298,7 +360,7 @@
             </div>
         </section>
 
-        <!-- Book with us section -->
+        <!-- FAQ section -->
         <section class="faq-section bg-extra-light">
             <div class="container thm-container pb-lg-2">
                 <div class="row">

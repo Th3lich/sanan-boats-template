@@ -122,13 +122,26 @@ a:hover {
 
 /* Container */
 .thm-container {
-    max-width: 1250px;
+    max-width: 1380px;
+}
+
+/* Z index */
+.z-index-3 {
+    z-index: 3;
+}
+
+.z-index-4 {
+    z-index: 4;
 }
 
 
 /*--------------------------------------------------------------
 # Titles
 --------------------------------------------------------------*/
+
+h1 {
+    font-size: min(calc(1.15rem + 4vw), 3.8rem);
+}
 
 h2 {
     font-size: min(calc(2.2rem + 0.8vw), 2.94rem);
@@ -152,14 +165,26 @@ h4 {
 # Buttons
 --------------------------------------------------------------*/
 
-.thm-btn-primary, .thm-btn-primary-lt, .thm-btn-primary-xl, .thm-btn-primary-lt-light, .thm-btn-secondary-lt {
+.thm-btn-primary, .thm-btn-primary-lt, .thm-btn-primary-xl, .thm-btn-primary-lt-light, .thm-btn-secondary-light-lt, .thm-btn-secondary-xl {
     width: fit-content;
     height: fit-content;
     border-radius: 28px;
     font-family: 'Zing Rust Base', serif;
     text-align: center;
-    background-color: var(--color-secondary);
     color: #fff !important;
+    border-color: transparent !important;
+}
+
+.thm-btn-primary, .thm-btn-primary-lt, .thm-btn-primary-xl, .thm-btn-primary-lt-light {
+    background-color: var(--color-secondary) !important;
+}
+
+.thm-btn-secondary-xl {
+    background-color: var(--color-primary) !important;
+}
+
+.thm-btn-secondary-light-lt {
+    background-color: var(--color-bg-light) !important;
 }
 
 .thm-btn-primary {
@@ -167,27 +192,48 @@ h4 {
     font-size: min(calc(0.9rem + 0.1vw), 1rem);
 }
 
-.thm-btn-primary-lt, .thm-btn-secondary-lt, .thm-btn-primary-lt-light {
-    padding: 4px 12px;
+.thm-btn-primary-lt, .thm-btn-secondary-light-lt, .thm-btn-primary-lt-light {
     font-size: min(calc(0.8rem + 0.1vw), 0.875rem);
 }
 
-.thm-btn-primary-xl {
+.thm-btn-primary-lt {
+    padding: 4px 12px;
+}
+
+.thm-btn-secondary-light-lt, .thm-btn-primary-lt-light {
+    padding: 2px 15px;
+    font-size: min(calc(0.78rem + 0.1vw), 0.85rem);
+}
+
+.thm-btn-primary-xl, .thm-btn-secondary-xl {
     padding: 8px 48px;
     font-size: min(calc(1rem + 0.11vw), 1.14rem);
 }
 
-.thm-btn-secondary-lt {
-    background-color: var(--color-bg-light);
-}
-
 .thm-btn-primary:hover, .thm-btn-primary-lt:hover, .thm-btn-primary-xl:hover {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary) !important;
 }
 
-.thm-btn-primary-lt-light:hover, .thm-btn-secondary-lt:hover {
-    background-color: #fff;
+.thm-btn-secondary-xl:hover {
+    background-color: var(--color-secondary) !important;
+}
+
+.thm-btn-primary-lt-light:hover, .thm-btn-secondary-light-lt:hover {
+    background-color: #fff !important;
     color: var(--color-primary) !important;
+}
+
+.thm-btn-primary:active, .thm-btn-primary-lt:active, .thm-btn-primary-xl:active, .thm-btn-primary-lt-light:active {
+    background-color: var(--color-secondary) !important;
+}
+
+.thm-btn-secondary-xl:active {
+    background-color: var(--color-primary) !important;
+}
+
+.thm-btn-secondary-light-lt:active {
+    background-color: var(--color-bg-light) !important;
+    color: #fff !important;
 }
 
 
@@ -204,13 +250,13 @@ h4 {
     font-size: min(calc(0.62rem + 0.1vw), 0.685rem);
 }
 
-.thm-form-control, .thm-form-check-input {
+.thm-form-control, .thm-form-check-input, .thm-form-select {
     border: 1px solid #b3c4d0;
     border-radius: 0 !important;
 }
 
 .thm-form-control {
-    padding: 6px;
+    padding: 6px 8px;
     font-size: 0.82rem;
 }
 
@@ -225,6 +271,16 @@ h4 {
     gap: 4px;
     align-items: center;
 }
+
+.thm-form-select {
+    padding: 6px 8px;
+    font-size: 0.82rem;
+    background-size: 15px 11px;
+}
+
+.thm-form-control::placeholder {
+    color: var(--color-bg-light);
+  }
 
 
 /*--------------------------------------------------------------
@@ -257,6 +313,10 @@ h4 {
 .thm-navbar {
     background-color: #edf3f8;
     height: 75px;
+}
+
+.thm-navbar-transparent {
+    background-color: transparent;
 }
 
 .thm-navbar .logo-container {
@@ -461,6 +521,10 @@ footer p {
     font-size: min(calc(1.6rem + 0.8vw), 2.25rem);
 }
 
+.faq-section .faq-quests {
+    padding-left: 0 !important;
+}
+
 .faq-section .faq-quests li {
     list-style: none;
     width: 100%;
@@ -618,7 +682,7 @@ footer p {
     padding: 3px 3px 0;
 }
 
-.form-boats-search .col-md {
+.form-boats-search .col-xl {
     margin-bottom: 14px;
 }
 
@@ -626,10 +690,10 @@ footer p {
     color: #fff;
 }
 
-.form-boats-search .thm-form-control {
+.form-boats-search .thm-form-control, .form-boats-search .thm-form-select {
     padding-left: 27px;
     font-size: 0.75rem;
-    max-width: 165px;
+    min-width: 165px;
 }
 
 .form-boats-search .search-icon {
@@ -709,4 +773,92 @@ footer p {
     background-position-y: center;
     z-index: 2;
     position: relative;
+}
+
+
+/*--------------------------------------------------------------
+# Book Now Section
+--------------------------------------------------------------*/
+
+.book-now-section .book-now-image-container {
+    width: 100%;
+    max-width: 620px;
+    padding: 0px 10px;
+    margin: auto;
+}
+
+.book-now-section .book-now-image-container .book-now-image {
+    width: 100%;
+    height: fit-content;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+
+/*--------------------------------------------------------------
+# Rates Section
+--------------------------------------------------------------*/
+
+.rates-section .rates-card {
+    max-width: 806px;
+}
+
+
+/*--------------------------------------------------------------
+# Boat Section
+--------------------------------------------------------------*/
+
+.boat-section .boat-thumbnail {
+    width: fit-content;
+}
+
+.boat-section .boat-info p {
+    font-size: min(calc(0.8rem + 0.1vw), 0.9rem);
+}
+
+.boat-section .boat-items > div {
+    border-bottom: 2px solid #b3c4d0;
+}
+
+.boat-section .boat-title p {
+    font-size: min(calc(1.05rem + 0.1vw), 1.2rem);
+}
+
+/*--------------------------------------------------------------
+# Form Boats search
+--------------------------------------------------------------*/
+
+.banner-section {
+    height: 680px;
+}
+
+.banner-section h1 {
+    pointer-events: none;
+}
+
+.banner-section .play-pause-btn {
+    margin: auto;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background: rgba(17,23,29,.4);
+    transition: opacity 0.2s ease-out;
+    color: white;
+}
+
+.banner-section .boat-video {
+    object-fit: cover;
+}
+
+@media (max-width: 1500px) {
+    .banner-section {
+        height: calc(70vh);
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-section {
+        height: calc(40vh);
+    }
 }
