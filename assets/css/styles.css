@@ -1,0 +1,864 @@
+/* Author: Javier López López
+   Version: 1.0
+   Date: 16/04/2023
+   File Description: Css file for theme styles
+*/
+/****************************************\
+01.General
+02.Titles
+03.Buttons
+04.Forms
+05.Header
+06.Navbar
+07.Boat card
+08.Service card
+09.Footer
+10.Book my charter section
+11.Book with us section
+12.Contact info section
+13.Contact Form Section
+14.Form Boats search
+*****************************************/
+
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+:root {
+    --color-primary: #3776af;
+    --color-secondary: #ffde59;
+    --color-primary-light: #e5edf5;
+    --color-primary-extra-light: #f3f7fa;
+    --color-font-2: #637b89;
+    --color-bg-light: #ccdde8;
+}
+
+/* Font declarations */
+@font-face {
+    font-family: 'Zing Rust Base';
+    src: url('../fonts/ZingRustBaseFont.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zing Rust Base Bold';
+    src: url('../fonts/ZingRustBaseBoldFont.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zing Sans Rust';
+    src: url('../fonts/ZingSansRustFont.woff2') format('woff2');
+    font-weight: 900;
+    font-style: italic;
+}
+
+html, body, p {
+    font-family: 'Zing Sans Rust', sans-serif;
+    color: #000;
+    font-size: min(calc(0.95rem + 0.1vw), 1.1rem);
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Zing Rust Base', serif;
+    color: var(--color-primary);
+}
+
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-primary-light);
+}
+
+/* Colors */
+.thm-color-primary {
+    color: var(--color-primary);
+}
+
+.thm-color-secondary {
+    color: var(--color-secondary);
+}
+
+/* Backgrounds */
+.bg-primary {
+    background-color: var(--color-primary) !important;
+}
+
+.bg-light {
+    background-color: var(--color-primary-light) !important;
+}
+
+.bg-extra-light {
+    background-color: var(--color-primary-extra-light) !important;
+}
+
+.bg-spirals {
+    position: relative;
+}
+
+.bg-spirals .container div {
+    z-index: 2;
+}
+
+.bg-spirals .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.25;
+    background-image: url(../images/our_services_bg.svg);
+    background-position: bottom center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+/* Container */
+.thm-container {
+    max-width: 1380px;
+}
+
+/* Z index */
+.z-index-3 {
+    z-index: 3;
+}
+
+.z-index-4 {
+    z-index: 4;
+}
+
+
+/*--------------------------------------------------------------
+# Titles
+--------------------------------------------------------------*/
+
+h1 {
+    font-size: min(calc(1.15rem + 4vw), 3.8rem);
+}
+
+h2 {
+    font-size: min(calc(2.2rem + 0.8vw), 2.94rem);
+}
+
+h3 {
+    font-size: min(calc(2rem + 0.8vw), 2.7rem);
+}
+
+h1 span, h2 span, h3 span {
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+h4 {
+    font-size: min(calc(1.32rem + 0.15vw), 1.45rem);
+}
+
+
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+
+.thm-btn-primary, .thm-btn-primary-lt, .thm-btn-primary-xl, .thm-btn-primary-lt-light, .thm-btn-secondary-light-lt, .thm-btn-secondary-xl {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 28px;
+    font-family: 'Zing Rust Base', serif;
+    text-align: center;
+    color: #fff !important;
+    border-color: transparent !important;
+}
+
+.thm-btn-primary, .thm-btn-primary-lt, .thm-btn-primary-xl, .thm-btn-primary-lt-light {
+    background-color: var(--color-secondary) !important;
+}
+
+.thm-btn-secondary-xl {
+    background-color: var(--color-primary) !important;
+}
+
+.thm-btn-secondary-light-lt {
+    background-color: var(--color-bg-light) !important;
+}
+
+.thm-btn-primary {
+    padding: 4px 48px;
+    font-size: min(calc(0.9rem + 0.1vw), 1rem);
+}
+
+.thm-btn-primary-lt, .thm-btn-secondary-light-lt, .thm-btn-primary-lt-light {
+    font-size: min(calc(0.8rem + 0.1vw), 0.875rem);
+}
+
+.thm-btn-primary-lt {
+    padding: 4px 12px;
+}
+
+.thm-btn-secondary-light-lt, .thm-btn-primary-lt-light {
+    padding: 2px 15px;
+    font-size: min(calc(0.78rem + 0.1vw), 0.85rem);
+}
+
+.thm-btn-primary-xl, .thm-btn-secondary-xl {
+    padding: 8px 48px;
+    font-size: min(calc(1rem + 0.11vw), 1.14rem);
+}
+
+.thm-btn-primary:hover, .thm-btn-primary-lt:hover, .thm-btn-primary-xl:hover {
+    background-color: var(--color-primary) !important;
+}
+
+.thm-btn-secondary-xl:hover {
+    background-color: var(--color-secondary) !important;
+}
+
+.thm-btn-primary-lt-light:hover, .thm-btn-secondary-light-lt:hover {
+    background-color: #fff !important;
+    color: var(--color-primary) !important;
+}
+
+.thm-btn-primary:active, .thm-btn-primary-lt:active, .thm-btn-primary-xl:active, .thm-btn-primary-lt-light:active {
+    background-color: var(--color-secondary) !important;
+}
+
+.thm-btn-secondary-xl:active {
+    background-color: var(--color-primary) !important;
+}
+
+.thm-btn-secondary-light-lt:active {
+    background-color: var(--color-bg-light) !important;
+    color: #fff !important;
+}
+
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+
+.thm-label, .thm-check-label {
+    margin-bottom: 0 !important;
+    color: var(--color-primary);
+}
+
+.thm-check-label {
+    font-size: min(calc(0.62rem + 0.1vw), 0.685rem);
+}
+
+.thm-form-control, .thm-form-check-input, .thm-form-select {
+    border: 1px solid #b3c4d0;
+    border-radius: 0 !important;
+}
+
+.thm-form-control {
+    padding: 6px 8px;
+    font-size: 0.82rem;
+}
+
+.thm-form-check-input {
+    width: 0.8em;
+    height: 0.8em;
+    margin-top: 0;
+}
+
+.thm-form-check {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.thm-form-select {
+    padding: 6px 8px;
+    font-size: 0.82rem;
+    background-size: 15px 11px;
+}
+
+.thm-form-control::placeholder {
+    color: var(--color-bg-light);
+  }
+
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+
+.thm-header {
+    background-color: var(--color-primary);
+    height: 40px;
+}
+
+.thm-header .info {
+    font-size: min(calc(0.62rem + 0.1vw), 0.685rem);
+}
+
+.thm-header .social-media a {
+    margin-right: 1px;
+}
+
+.thm-header .access a {
+    font-size: min(calc(0.66rem + 0.1vw), 0.72rem);
+    text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+
+.thm-navbar {
+    background-color: #edf3f8;
+    height: 75px;
+}
+
+.thm-navbar-transparent {
+    background-color: transparent;
+}
+
+.thm-navbar .logo-container {
+    width: 200px;
+    height: 54px;
+}
+
+.thm-navbar .nav-item {
+    list-style: none;
+}
+
+.thm-navbar .nav-item .nav-link {
+    padding: 15px 0.5rem;
+    margin: 0 16px;
+    font-family: 'Zing Rust Base', serif;
+    color: var(--color-primary);
+    font-size: min(calc(1.08rem + 0.1vw), 1.16rem);
+    transition: scale .09s;
+}
+
+.thm-navbar .nav-item .nav-link:hover {
+    scale: 1.05;
+}
+
+.thm-navbar .nav-link.active {
+    text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------
+# Boat card
+--------------------------------------------------------------*/
+
+.boat-card .boat-image {
+    width: fit-content;
+    margin: 10px 0;
+}
+
+.boat-card .boat-image img {
+    object-fit: cover;
+}
+
+.boat-card .boat-content h4 {
+    margin-bottom: 0;
+    line-height: 25px;
+    font-size: min(calc(1.3rem + 0.15vw), 1.43rem);
+}
+
+.boat-card .boat-content p {
+    font-size: min(calc(0.75rem + 0.1vw), 0.79rem);
+}
+
+.boat-card .boat-items p {
+    margin: 3.5px 0;
+}
+
+.boat-card .boat-items > div:not(:last-child) {
+    border-bottom: 1px solid #b3c4d0;
+}
+
+
+/*--------------------------------------------------------------
+# Service card
+--------------------------------------------------------------*/
+
+.service-card .service-image {
+    width: fit-content;
+    height: 226px;
+}
+
+.service-card .service-image img {
+    object-fit: cover;
+}
+
+.service-card .service-content {
+    padding-top: 0.9rem;
+    padding-bottom: 0.8rem;
+    border-left: var(--color-primary) solid 1px;
+    border-right: var(--color-primary) solid 1px;
+    border-bottom: var(--color-primary) solid 1px;
+    background-color: #fff;
+}
+
+.service-card .service-content h4 {
+    font-size: min(calc(1.69rem + 0.2vw), 1.8rem);
+}
+
+.service-card .service-content p {
+    font-size: min(calc(0.75rem + 0.08vw), 0.9rem);
+    line-height: 18px;
+}
+
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+footer ul {
+    padding-left: 0;
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 2px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none!important;
+    font-size: min(calc(0.95rem + 0.1vw), 1.04rem);
+}
+
+footer a:hover {
+    color: var(--color-secondary);
+}
+
+footer p {
+    font-size: min(calc(0.78rem + 0.1vw), 0.84rem);
+}
+
+@media screen and (max-width: 767px) {
+    footer .footer-logo {
+        width: 250px!important;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Book my charter section
+--------------------------------------------------------------*/
+
+.book-my-charter-section h3 {
+    font-size: min(calc(1.9rem + 0.8vw), 2.6rem);
+}
+
+.book-my-charter-section .book-my-charter-images {
+    height: 390px;
+}
+
+.book-my-charter-section .book-my-charter-img-1 {
+    width: 398px;
+    height: 347px;
+}
+
+.book-my-charter-section .book-my-charter-img-2 {
+    width: 395px;
+    height: 301px;
+    left: 94px;
+}
+
+.book-my-charter-section .book-my-charter-img-1 img, .book-my-charter-section .book-my-charter-img-2 img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.book-my-charter-section .book-my-charter-img-1 img {
+    margin-left: -32px;
+}
+
+@media screen and (max-width: 767px) {
+    .book-my-charter-section .book-my-charter-images {
+        width: 340px;
+        height: 264px;
+        margin: auto;
+    }
+    
+    .book-my-charter-section .book-my-charter-img-1 {
+        width: 271px;
+        height: 234px;
+    }
+    
+    .book-my-charter-section .book-my-charter-img-2 {
+        width: 269px;
+        height: 202px;
+        left: 68px;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Book with us section
+--------------------------------------------------------------*/
+
+.book-with-us-section {
+    background-image: url(../images/book_with_us_bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.book-with-us-section h2 {
+    font-size: min(calc(2.4rem + 2vw), 3.8rem);
+}
+
+
+/*--------------------------------------------------------------
+# FAQ section
+--------------------------------------------------------------*/
+
+.faq-section h3 {
+    font-size: min(calc(1.6rem + 0.8vw), 2.25rem);
+}
+
+.faq-section .faq-quests {
+    padding-left: 0 !important;
+}
+
+.faq-section .faq-quests li {
+    list-style: none;
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 10px;
+}
+
+.faq-section .faq-quest {
+    cursor: pointer;
+    background-color: #fff;
+    padding: 1.18rem;
+    border: 1px solid #b3c4d0;
+}
+
+.faq-section .quest-active .faq-quest {
+    background-color: var(--color-bg-light);
+}
+
+.faq-section .faq-quest h5 {
+    font-size: min(calc(0.85rem + 0.13vw), 0.95rem);
+    font-family: 'Zing Sans Rust', sans-serif;
+}
+
+.faq-section .quest-active .faq-quest h5 {
+    color: #fff;
+}
+
+.faq-section .faq-quest .faq-arrow {
+    width: 8px;
+    height: 8px;
+    transition: -webkit-transform 0.7s;
+    transition: transform 0.7s;
+    transition: transform 0.7s, -webkit-transform 0.7s;
+    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    border-top: 2px solid var(--color-primary);
+    border-right: 2px solid var(--color-primary);
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.faq-section .quest-active .faq-quest .faq-arrow {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.faq-section .faq-answer {
+    height: 0;
+    background-color: #fff;
+    overflow: hidden;
+    transition: .7s ease-in;
+    transition-property: height;
+    -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.faq-section .faq-answer p {
+    font-size: min(calc(0.6rem + 0.1vw), 0.8rem);
+    padding: 1.65rem 1.45rem;
+    line-height: 1.2;
+}
+
+
+/*--------------------------------------------------------------
+# Contact Info Section
+--------------------------------------------------------------*/
+
+.contact-info-section h2 {
+    font-size: min(calc(2rem + 0.9vw), 2.94rem);
+}
+
+.contact-info-section .contact-info-image-container {
+    width: 100%;
+    max-width: 620px;
+    padding: 0px 10px;
+    margin: auto;
+}
+
+.contact-info-section .message-icon-container {
+    width: 65px;
+    height: 65px;
+    background-color: var(--color-primary);
+    border-radius: 32.5px;
+    left: -20px;
+    bottom: 50px;
+}
+
+.contact-info-section .contact-info-image-container .contact-info-image {
+    width: 100%;
+    height: fit-content;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.contact-info-section .info-title {
+    color: var(--color-primary);
+    font-family: 'Zing Rust Base Bold';
+    font-size: min(calc(1.25rem + 0.1vw), 1.35rem);
+    margin-bottom: 0.1rem;
+}
+
+.contact-info-section p:not(.info-title) {
+    color: var(--color-font-2);
+    font-size: min(calc(1.1rem + 0.08vw), 1.16rem);
+    margin-bottom: 0.6rem;
+}
+
+@media (max-width: 767px) {
+    .contact-info-section .contact-info-image-container .contact-info-image {
+        border-top-left-radius: 70px;
+        border-bottom-right-radius: 70px;
+    }
+
+    .contact-info-section .message-icon-container {
+        width: 38px;
+        height: 38px;
+        background-color: var(--color-primary);
+        border-radius: 20px;
+        left: -8px;
+        bottom: 20px;
+    }
+
+    .contact-info-section .message-icon-container img {
+        width: 21px;
+        height: fit-content;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Contact Form Section
+--------------------------------------------------------------*/
+
+.contact-form-section h3 {
+    font-size: min(calc(1.65rem + 0.8vw), 2.28rem);
+}
+
+.contact-form-section p {
+    font-size: min(calc(1.05rem + 0.12vw), 1.15rem);
+}
+
+.contact-form-card {
+    width: 100%;
+    max-width: 810px;
+    background-color: var(--color-bg-light);
+}
+
+
+/*--------------------------------------------------------------
+# Form Boats search
+--------------------------------------------------------------*/
+
+.form-boats-search {
+    background-color: var(--color-primary);
+    padding: 3px 3px 0;
+}
+
+.form-boats-search .col-xl {
+    margin-bottom: 14px;
+}
+
+.form-boats-search .thm-label, .form-boats-search span {
+    color: #fff;
+}
+
+.form-boats-search .thm-form-control, .form-boats-search .thm-form-select {
+    padding-left: 27px;
+    font-size: 0.75rem;
+    min-width: 165px;
+}
+
+.form-boats-search .search-icon {
+    left: 8px;
+    bottom: 11px;
+    vertical-align: middle;
+}
+
+.form-boats-search .thm-label, .form-boats-search span {
+    font-size: min(calc(0.56rem + 0.1vw), 0.62rem);
+}
+
+.form-boats-search .thm-range-value-left, .form-boats-search .thm-range-value-right {
+    bottom: -8px;
+}
+
+.thm-range {
+    position: relative;
+}
+
+.thm-range::before, .thm-range::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-primary);
+    border: 4.5px solid #96b2c8;
+    border-radius: 50%;
+    margin: auto;
+    z-index: 0;
+}
+
+.thm-range::before {
+    left: -1px;
+}
+
+.thm-range::after {
+    right: -1px;
+}
+
+.thm-range::-webkit-slider-runnable-track {
+    height: 4.8px;
+    background-color: #96b2c8;
+}
+
+.thm-range::-moz-range-track {
+    height: 4.8px;
+    background-color: #96b2c8;
+}
+
+.thm-range::-webkit-slider-thumb {
+   height: 12px;
+   width: 12px;
+   border-radius: 50%;
+   margin-top: -3.4px;
+   background-image: url(../images/ic_arrow_right.svg);
+   background-color: #fff;
+   background-repeat: no-repeat;
+   background-position-x: 1.8px;
+   background-position-y: center;
+   z-index: 2;
+   position: relative;
+}
+
+.thm-range::-moz-range-thumb {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-top: -3.4px;
+    background-image: url(../images/ic_arrow_right.svg);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position-x: 1.8px;
+    background-position-y: center;
+    z-index: 2;
+    position: relative;
+}
+
+
+/*--------------------------------------------------------------
+# Book Now Section
+--------------------------------------------------------------*/
+
+.book-now-section .book-now-image-container {
+    width: 100%;
+    max-width: 620px;
+    padding: 0px 10px;
+    margin: auto;
+}
+
+.book-now-section .book-now-image-container .book-now-image {
+    width: 100%;
+    height: fit-content;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+
+/*--------------------------------------------------------------
+# Rates Section
+--------------------------------------------------------------*/
+
+.rates-section .rates-card {
+    max-width: 806px;
+}
+
+
+/*--------------------------------------------------------------
+# Boat Section
+--------------------------------------------------------------*/
+
+.boat-section .boat-thumbnail {
+    width: fit-content;
+}
+
+.boat-section .boat-info p {
+    font-size: min(calc(0.8rem + 0.1vw), 0.9rem);
+}
+
+.boat-section .boat-items > div {
+    border-bottom: 2px solid #b3c4d0;
+}
+
+.boat-section .boat-title p {
+    font-size: min(calc(1.05rem + 0.1vw), 1.2rem);
+}
+
+/*--------------------------------------------------------------
+# Form Boats search
+--------------------------------------------------------------*/
+
+.banner-section {
+    height: 680px;
+}
+
+.banner-section h1 {
+    pointer-events: none;
+}
+
+.banner-section .play-pause-btn {
+    margin: auto;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background: rgba(17,23,29,.4);
+    transition: opacity 0.2s ease-out;
+    color: white;
+}
+
+.banner-section .boat-video {
+    object-fit: cover;
+}
+
+@media (max-width: 1500px) {
+    .banner-section {
+        height: calc(70vh);
+    }
+}
+
+@media (max-width: 767px) {
+    .banner-section {
+        height: calc(40vh);
+    }
+}

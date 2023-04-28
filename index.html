@@ -16,6 +16,454 @@
         <link rel="stylesheet" href="assets/css/styles.css">
     </head>
     <body>
+        <!-- Header -->
+        <header class="thm-header">
+            <div class="container thm-container d-flex justify-content-between align-items-center h-100 ps-2 ps-lg-4 pe-2 pe-lg-5">
+                <p class="info mb-0 text-white">info@sananboats.com <span class="px-md-1">|</span> +34 653 48 23 63</p>
+                <div class="d-flex">
+                    <div class="social-media pe-2 pe-md-4">
+                        <a href="#"><img src="assets/images/ic_instagram.svg" alt="Instagram logo" width="19" height="19"></a>
+                        <a href="#"><img src="assets/images/ic_facebook.svg" alt="Facebook logo" width="19" height="19"></a>
+                        <a href="#"><img src="assets/images/ic_google.svg" alt="Google logo" width="19" height="19"></a>
+                    </div>
+                    <div class="access">
+                        <img src="assets/images/ic_user.svg" alt="User image" width="15" height="15">
+                        <a class="text-white" href="#">Acceso</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner-section overflow-hidden">
+            <div class="container-fluid h-100 position-relative align-items-center justify-content-center px-0">
+                <!-- Navbar -->
+                <nav class="navbar thm-navbar thm-navbar-transparent position absolute start-0 top-0 end-0 z-index-4">
+                    <div class="container thm-container">
+                        <a class="logo-container overflow-hidden d-flex align-items-center" href="/">
+                            <img class="logo mt-2" src="assets/images/sanan_boats_logo.svg" alt="Logo Sanan Boats" width="200">
+                        </a>
+                        <ul class="nav-items d-none d-md-flex mb-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="boats.html">BARCOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">WATER TOYS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">MOTOS ACUÁTICAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">CONTACTO</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container thm-container z-index-3 d-flex align-items-center justify-content-center position-absolute start-0 top-0 end-0 bottom-0">
+                    <div class="row">
+                        <div class="col z-index-3 position-relative d-flex flex-column gap-3 justify-content-center align-items-center p-0">
+                            <div id="play_pause_btn" class="play-pause-btn position-absolute start-0 top-0 end-0 bottom-0 d-flex justify-content-center align-items-center">
+                                <svg id="play_svg" class="d-none" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display: block;"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.248 4.212l11.05 6.574c.694.412.91 1.29.483 1.961-.121.19-.287.35-.483.467l-11.05 6.574c-.694.413-1.602.204-2.03-.467A1.39 1.39 0 0 1 6 18.574V5.426C6 4.638 6.66 4 7.475 4c.273 0 .54.073.773.212z" fill="currentColor"></path></svg>
+                                <svg id="pause_svg" class="d-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="7" y="5" width="3" height="14" rx="1.5" fill="currentColor"></rect><rect x="14" y="5" width="3" height="14" rx="1.5" fill="currentColor"></rect></svg>
+                            </div>
+
+                            <h1 class="text-white position-relative z-index-4 mb-0 text-center">ALQUILER DE <span>BARCOS</span> EN IBIZA</h1>
+                            <a href="boats.html" class="btn thm-btn-primary position-relative z-index-4 mb-0 mb-md-4">VER TODOS LOS BARCOS</a>
+                        </div>
+                    </div>
+                </div>
+                <video id="boat_video" class="boat-video position-absolute start-0 top-0 end-0 bottom-0 w-100 h-100" preload="none" autoplay="" muted="" poster="assets/video/boat_video_poster.jpg">
+                    <source src="assets/video/boat_video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- Boat Section -->
+        <section class="our-boats-section">
+            <div class="container thm-container px-md-5">
+                <div class="row py-4 mt-2 mb-3">
+                    <div class="col text-center">
+                        <h3 class="pt-2 pb-3">NUESTROS <span>BARCOS</span></h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 gx-4 gy-4 px-4 px-md-0">
+                    <div class="col">
+                        <div class="boat-card px-1">
+                            <div class="boat-image position-relative overflow-hidden">
+                                <img class=" w-100" src="assets/images/boat_placeholder.jpg" alt="Boat image">
+                            </div>
+                            <div class="boat-content">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <h4>NOMBRE DEL BARCO</h4>
+                                        <p class="mb-2">Puerto de San Antonio</p>
+                                    </div>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                </div>
+                                <div class="boat-items d-flex flex-column">
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Eslora</p>
+                                        <p>12m</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Capacidad</p>
+                                        <p>8 pax</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Precio desde</p>
+                                        <p>500€ / día</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="boat-card px-1">
+                            <div class="boat-image position-relative overflow-hidden">
+                                <img class=" w-100" src="assets/images/boat_placeholder.jpg" alt="Boat image">
+                            </div>
+                            <div class="boat-content">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <h4>NOMBRE DEL BARCO</h4>
+                                        <p class="mb-2">Puerto de San Antonio</p>
+                                    </div>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                </div>
+                                <div class="boat-items d-flex flex-column">
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Eslora</p>
+                                        <p>12m</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Capacidad</p>
+                                        <p>8 pax</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Precio desde</p>
+                                        <p>500€ / día</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="boat-card px-1">
+                            <div class="boat-image position-relative overflow-hidden">
+                                <img class=" w-100" src="assets/images/boat_placeholder.jpg" alt="Boat image">
+                            </div>
+                            <div class="boat-content">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <h4>NOMBRE DEL BARCO</h4>
+                                        <p class="mb-2">Puerto de San Antonio</p>
+                                    </div>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                </div>
+                                <div class="boat-items d-flex flex-column">
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Eslora</p>
+                                        <p>12m</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Capacidad</p>
+                                        <p>8 pax</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Precio desde</p>
+                                        <p>500€ / día</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="boat-card px-1">
+                            <div class="boat-image position-relative overflow-hidden">
+                                <img class=" w-100" src="assets/images/boat_placeholder.jpg" alt="Boat image">
+                            </div>
+                            <div class="boat-content">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <h4>NOMBRE DEL BARCO</h4>
+                                        <p class="mb-2">Puerto de San Antonio</p>
+                                    </div>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                </div>
+                                <div class="boat-items d-flex flex-column">
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Eslora</p>
+                                        <p>12m</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Capacidad</p>
+                                        <p>8 pax</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Precio desde</p>
+                                        <p>500€ / día</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="boat-card px-1">
+                            <div class="boat-image position-relative overflow-hidden">
+                                <img class=" w-100" src="assets/images/boat_placeholder.jpg" alt="Boat image">
+                            </div>
+                            <div class="boat-content">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <h4>NOMBRE DEL BARCO</h4>
+                                        <p class="mb-2">Puerto de San Antonio</p>
+                                    </div>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                </div>
+                                <div class="boat-items d-flex flex-column">
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Eslora</p>
+                                        <p>12m</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Capacidad</p>
+                                        <p>8 pax</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Precio desde</p>
+                                        <p>500€ / día</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="boat-card px-1">
+                            <div class="boat-image position-relative overflow-hidden">
+                                <img class=" w-100" src="assets/images/boat_placeholder.jpg" alt="Boat image">
+                            </div>
+                            <div class="boat-content">
+                                <div class="d-flex justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <h4>NOMBRE DEL BARCO</h4>
+                                        <p class="mb-2">Puerto de San Antonio</p>
+                                    </div>
+                                    <a href="boat.html" class="btn thm-btn-primary-lt">RESERVAR</a>
+                                </div>
+                                <div class="boat-items d-flex flex-column">
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Eslora</p>
+                                        <p>12m</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Capacidad</p>
+                                        <p>8 pax</p>
+                                    </div>
+                                    <div class="boat-item d-flex justify-content-between">
+                                        <p>Precio desde</p>
+                                        <p>500€ / día</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row py-4 py-md-5">
+                    <div class="col text-center">
+                        <a href="boats.html" class="btn thm-btn-primary">VER TODOS LOS BARCOS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Book my charter section -->
+        <section class="book-my-charter-section bg-light py-4 py-lg-5">
+            <div class="container thm-container px-5 pt-4 pb-lg-5 mt-2 mt-lg-0">
+                <div class="row">
+                    <div class="col-lg-6 p-lg-4 mb-4 mb-lg-0">
+                        <h3>RESERVA TU CHARTER EN SAN ANTONIO, UN LUGAR MÁGICO EN IBIZA</h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+                        <a href="#" class="btn thm-btn-primary">VER TODOS LOS BARCOS</a>
+                    </div>
+                    <div class="col-lg-6 book-my-charter-images position-relative mt-2 mt-lg-0">
+                        <div class="book-my-charter-img-2 position-absolute top-0 overflow-hidden">
+                            <img src="assets/images/book_our_charter_2.jpg" alt="Book my charter 2">
+                        </div>
+                        <div class="book-my-charter-img-1 position-absolute bottom-0 start-0 overflow-hidden">
+                            <img src="assets/images/book_our_charter_1.jpg" alt="Book my charter 1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our services section -->
+        <section class="our-services-section bg-spirals">
+            <div class="container thm-container position-relative pb-5 gx-5">
+                <div class="row py-4 mt-2 mb-3">
+                    <div class="col text-center">
+                        <h3 class="pt-2 pb-3">NUESTROS <span>SERVICIOS</span></h3>
+                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+                    </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 gy-4 mb-4">
+                    <div class="col">
+                        <div class="service-card px-1">
+                            <div class="service-image position-relative overflow-hidden">
+                                <img class=" w-100" src="assets/images/boat_placeholder.jpg" alt="Boat image">
+                            </div>
+                            <div class="service-content d-flex flex-column align-items-center px-4">
+                                <h4>BARCOS</h4>
+                                <p class="text-center p-1 pb-2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui.</p>
+                                <a href="#" class="btn thm-btn-primary-lt">VER MÁS</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-card px-1">
+                            <div class="service-image position-relative overflow-hidden">
+                                <img class=" w-100" src="assets/images/service_placeholder_1.jpg" alt="Boat image">
+                            </div>
+                            <div class="service-content d-flex flex-column align-items-center px-4">
+                                <h4>MOTOS ACUÁTICAS</h4>
+                                <p class="text-center p-1 pb-2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui.</p>
+                                <a href="#" class="btn thm-btn-primary-lt">VER MÁS</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="service-card px-1">
+                            <div class="service-image position-relative overflow-hidden">
+                                <img class=" w-100" src="assets/images/service_placeholder_2.jpg" alt="Boat image">
+                            </div>
+                            <div class="service-content d-flex flex-column align-items-center px-4">
+                                <h4>WATER TOYS</h4>
+                                <p class="text-center p-1 pb-2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui.</p>
+                                <a href="#" class="btn thm-btn-primary-lt">VER MÁS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Book with us section -->
+        <section class="book-with-us-section py-5">
+            <div class="container thm-container py-lg-5">
+                <div class="row">
+                    <div class="col text-center">
+                        <h2 class="text-white pb-2">¿QUIERES <span>RESERVAR</span> CON NOSOTROS?</h2>
+                        <a href="#" class="btn thm-btn-primary">CONTACTA CON NOSOTROS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ section -->
+        <section class="faq-section bg-extra-light">
+            <div class="container thm-container pb-lg-2">
+                <div class="row">
+                    <div class="col py-2 mt-4 mb-2 text-center">
+                        <h3>FAQ - PREGUNTAS FRECUENTES</h3>
+                    </div>
+                </div>
+                <div class="row pb-5">
+                    <div class="col d-flex justify-content-center">
+                        <ul class="faq-quests">
+                            <li>
+                                <div class="faq-quest d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">PREGUNTA 1</h5>
+                                    <div class="faq-arrow"></div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p class="mb-0">
+                                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="faq-quest d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">PREGUNTA 2</h5>
+                                    <div class="faq-arrow"></div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p class="mb-0">
+                                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="faq-quest d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">PREGUNTA 3</h5>
+                                    <div class="faq-arrow"></div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p class="mb-0">
+                                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="faq-quest d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0">PREGUNTA 4</h5>
+                                    <div class="faq-arrow"></div>
+                                </div>
+                                <div class="faq-answer">
+                                    <p class="mb-0">
+                                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-primary">
+            <div class="container thm-container py-3 pt-lg-4">
+                <div class="row pb-4 pt-lg-2">
+                    <div class="col-lg-4 text-center text-lg-start">
+                        <img class="footer-logo" src="assets/images/sanan_boats_logo_white.svg" alt="Sanan boats logo" width="320px">
+                    </div>
+                    <div class="col-lg-8 pt-lg-5 text-center text-sm-start">
+                        <div class="row">
+                            <div class="col-sm-4 pb-2 pb-sm-0">
+                                <h4 class="text-white">CONTACTO</h4>
+                                <ul>
+                                    <li><a href="#">+34 653 48 23 63</a></li>
+                                    <li><a href="#">info@sananboats.com</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4 pb-2 pb-sm-0">
+                                <h4 class="text-white">SERVICIOS</h4>
+                                <ul>
+                                    <li><a href="#">Barcos</a></li>
+                                    <li><a href="#">Motos de agua</a></li>
+                                    <li><a href="#">Juguetes acuáticos</a></li>
+                                    <li><a href="#">Contacto</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-4 pb-2 pb-sm-0">
+                                <h4 class="text-white">POLÍTICAS</h4>
+                                <ul>
+                                    <li><a href="#">Política de privacidad</a></li>
+                                    <li><a href="#">Términos y condiciones</a></li>
+                                    <li><a href="#">Aviso legal</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col text-center">
+                        <p class="mb-0 pb-lg-1 pt-sm-3 text-white">© San & Boats. 2023. Todos los derechos reservados</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
         
         <!-- Application JavaScript -->
         <script src="assets/js/main.js"></script>
