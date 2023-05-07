@@ -10,14 +10,15 @@
 04.Forms
 05.Header
 06.Navbar
-07.Boat card
-08.Service card
-09.Footer
-10.Book my charter section
-11.Book with us section
-12.Contact info section
-13.Contact Form Section
-14.Form Boats search
+07.Basic Hamburger menu
+08.Boat card
+09.Service card
+10.Footer
+11.Book my charter section
+12.Book with us section
+13.Contact info section
+14.Contact Form Section
+15.Form Boats search
 *****************************************/
 
 
@@ -313,6 +314,7 @@ h4 {
 .thm-navbar {
     background-color: #edf3f8;
     height: 75px;
+    z-index: 99;
 }
 
 .thm-navbar-transparent {
@@ -322,6 +324,10 @@ h4 {
 .thm-navbar .logo-container {
     width: 200px;
     height: 54px;
+}
+
+.thm-navbar .nav-items {
+    transition: .7s ease-out;
 }
 
 .thm-navbar .nav-item {
@@ -347,6 +353,62 @@ h4 {
 
 .thm-navbar .nav-link.active {
     text-decoration: underline;
+}
+
+
+/*--------------------------------------------------------------
+# Basic Hamburger menu
+--------------------------------------------------------------*/
+
+.hamburger {
+    padding: 5px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: var(--color-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.hamburger div + div {
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 767px) {
+    .nav-items.open {
+        padding: 16px 25px;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        right: 0;
+        display: flex !important;
+        flex-direction: column;
+        background-color: #edf3f8;
+    }
+
+    .thm-navbar-transparent .nav-items.open {
+        background-color: #edf3f86c;
+        backdrop-filter: blur(5px);
+    }
+
+    .nav-items.open .nav-item .nav-link:hover {
+        scale: 1.015 !important;
+    }
+
+    .hamburger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px,6px);
+    }
+    
+    .hamburger.toggle .line2 {
+        transition: all 0.7s ease;
+        width:0;
+    }
+    
+    .hamburger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px,-6px);
+    }
 }
 
 

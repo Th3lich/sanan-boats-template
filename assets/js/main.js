@@ -55,4 +55,17 @@ window.addEventListener('load', function() {
             pauseSvg.classList.add('d-none');
         });
     }
+
+    // Hamburger
+    let hamburger = document.querySelector('.hamburger');
+    if (hamburger) {
+        const navLinks = document.querySelector('.nav-items');
+        const links = document.querySelectorAll('.nav-items li');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('toggle');
+            navLinks.classList.toggle('open');
+        });
+    }
+
 });
